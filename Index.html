@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Nikah of Imtiyaz & Gulnar</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Great+Vibes&family=Montserrat:wght@300;500;700;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <style>
+        :root {
+            --liquid-gold: linear-gradient(135deg, #BF953F 0%, #FCF6BA 45%, #B38728 70%, #AA771C 100%);
+            --deep-maroon: #4A0404;
+            --royal-black: #0a0a0a;
+            --soft-cream: #F9F7F2;
+            --gold-solid: #C5A059;
+        }
+
+        /* Smooth Scrolling */
+        html { scroll-behavior: smooth; }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--royal-black); /* Changed to Dark for Premium Contrast */
+            font-family: 'Montserrat', sans-serif;
+            color: var(--soft-cream);
+            overflow-x: hidden;
+        }
+
+        /* Floating Gold Particles Background Effect */
+        .bg-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+            z-index: -2;
+        }
+
+        .gold-pattern {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/black-linen.png');
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        /* Luxury Moving Border */
+        .page-border {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border: 15px solid transparent;
+            border-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10H90V90H10V10Z' stroke='%23C5A059' stroke-width='2'/%3E%3C/svg%3E") 30 stretch;
+            pointer-events: none;
+            z-index: 999;
+            animation: borderPulse 4s infinite alternate;
+        }
+
+        @keyframes borderPulse {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        /* Hero Section */
+        header {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .bismillah {
+            font-family: 'Amiri', serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            background: var(--liquid-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .parents-name {
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            font-weight: 900; /* Bolded */
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            color: var(--gold-solid);
+        }
+
+        .teacher-tag {
+            color: #fff;
+            font-weight: 500;
+            margin-bottom: 15px;
+            display: block;
+            font-size: 1rem;
+        }
+
+        .address-tag {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #bbb;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .invitation-msg {
+            font-style: italic;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-weight: 500;
+            line-height: 1.8;
+            color: #eee;
+        }
+
+        .main-names {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(4rem, 10vw, 7.5rem);
+            margin: 15px 0;
+            background: var(--liquid-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0px 5px 15px rgba(197, 160, 89, 0.3));
+        }
+
+        .grand-lineage {
+            font-size: 1rem;
+            color: #ccc;
+            margin-top: 15px;
+            font-weight: 600; /* Bolded */
+            line-height: 1.8;
+        }
+
+        .wedding-date-hero {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            background: var(--liquid-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-top: 2px solid var(--gold-solid);
+            border-bottom: 2px solid var(--gold-solid);
+            padding: 15px 50px;
+            margin-top: 50px;
+            letter-spacing: 5px;
+        }
+
+        /* Program Details Section */
+        section {
+            padding: 100px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--gold-solid);
+            margin-bottom: 60px;
+            letter-spacing: 4px;
+        }
+
+        .event-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        /* Glassmorphism Card Effect */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 60px 40px;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-20px);
+            border: 1px solid var(--gold-solid);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .card h3 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: var(--gold-solid);
+        }
+
+        .date-hijri {
+            font-size: 1.1rem;
+            color: #fff;
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+
+        .venue-title { 
+            font-weight: 900; 
+            color: var(--gold-solid); 
+            margin-top: 30px; 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            font-size: 1.2rem;
+        }
+
+        /* Countdown Area */
+        .countdown-wrap {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://www.transparenttextures.com/patterns/arabesque.png');
+            color: white;
+            padding: 100px 20px;
+            margin: 80px 0;
+            border-top: 1px solid var(--gold-solid);
+            border-bottom: 1px solid var(--gold-solid);
+        }
+
+        .timer { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+        
+        .t-segment { text-align: center; }
+        
+        .t-segment span {
+            display: block;
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-family: 'Cinzel Decorative', serif;
+            font-weight: 900;
+            background: var(--liquid-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Shine Animation Button */
+        .btn-gold {
+            display: inline-block;
+            padding: 18px 45px;
+            background: var(--liquid-gold);
+            color: #000;
+            text-decoration: none;
+            font-weight: 900;
+            margin-top: 35px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 0;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .btn-gold:after {
+            content: '';
+            position: absolute;
+            top: -50%; left: -60%; width: 20%; height: 200%;
+            background: rgba(255, 255, 255, 0.4);
+            transform: rotate(30deg);
+            transition: 0.5s;
+        }
+
+        .btn-gold:hover:after {
+            left: 120%;
+        }
+
+        .btn-gold:hover {
+            box-shadow: 0 0 30px rgba(197, 160, 89, 0.6);
+            transform: scale(1.05);
+        }
+
+        .compliments {
+            padding: 100px 10%;
+            background: #050505;
+        }
+
+        .jamdar-tag {
+            font-weight: 900;
+            color: var(--gold-solid);
+            font-size: 1.8rem;
+            margin-top: 30px;
+            display: block;
+            letter-spacing: 3px;
+        }
+
+        @media (max-width: 850px) {
+            .event-container { grid-template-columns: 1fr; }
+            .main-names { font-size: 4.5rem; }
+            .timer { gap: 20px; }
+            .section-title { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-overlay"></div>
+    <div class="gold-pattern"></div>
+    <div class="page-border"></div>
+
+    <header>
+        <div class="bismillah" data-aos="zoom-in">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
+        
+        <div data-aos="fade-up">
+            <p class="parents-name">Mr. Mahmadysuf Shoukat Mulla & Mrs. Shakeelabanu M. Mulla</p>
+            <span class="teacher-tag">(Bagawale Teacher)</span>
+            <p class="address-tag">Of Shindikurbet Tq. Gokak Dist. Belgaum</p>
+        </div>
+
+        <p class="invitation-msg" data-aos="fade-in" data-aos-delay="400">Request the pleasure of your presence & blessings on the auspicious occasion of the Nikah Ceremony of our beloved Son</p>
+        
+        <div class="couple-wrap" data-aos="flip-left" data-aos-duration="2000">
+            <h1 class="main-names">Imtiyaz</h1>
+            <p style="font-family: 'Cinzel Decorative'; color: var(--gold-solid); font-weight: 900; letter-spacing: 5px;">WITH</p>
+            <h1 class="main-names">Gulnar</h1>
+        </div>
+
+        <div class="grand-lineage" data-aos="fade-up">
+            <p>(Grand S/o. Late Masabi Maliksab Bagawale)</p>
+            <p>(D/o. Aziz Haji Isaq Nalband of Nippani)</p>
+        </div>
+        
+        <div class="wedding-date-hero" data-aos="zoom-out" data-aos-delay="800">
+            MAY 17, 2026
+        </div>
+    </header>
+
+    <div class="countdown-wrap">
+        <h2 data-aos="fade-up" style="text-align:center; color:var(--gold-solid); margin-bottom:40px; font-family:'Cinzel Decorative'; font-weight: 900; letter-spacing: 5px;">THE CELEBRATION BEGINS IN</h2>
+        <div class="timer">
+            <div class="t-segment"><span id="days">00</span><p>DAYS</p></div>
+            <div class="t-segment"><span id="hours">00</span><p>HOURS</p></div>
+            <div class="t-segment"><span id="mins">00</span><p>MINS</p></div>
+            <div class="t-segment"><span id="secs">00</span><p>SECS</p></div>
+        </div>
+    </div>
+
+    <section id="events">
+        <h2 class="section-title" data-aos="fade-down">PROGRAM DETAILS</h2>
+        
+        <div class="event-container">
+            <div class="card" data-aos="fade-right">
+                <h3>Insha Allah Nikah</h3>
+                <div class="date-hijri">Sunday 17th May 2026 <br> (29th Zilqada 1447 Hijri)</div>
+                <p style="font-size: 1.3rem;"><strong>At 11:45 am.</strong></p>
+                <p class="venue-title">Venue Details</p>
+                <p style="font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 10px;">Babaji Garden</p>
+                <p style="font-weight: 500;">Pune Bangalore Highway <br> Near Gandhi Hospital, Nippani.</p>
+                <a href="https://www.google.com/maps/search/Babaji+Garden+Nippani" target="_blank" class="btn-gold">Navigate to Venue</a>
+            </div>
+
+            <div class="card" data-aos="fade-left">
+                <h3>Valima / Reception</h3>
+                <div class="date-hijri">Tuesday 19th May 2026</div>
+                <p style="font-size: 1.3rem;"><strong>At 12:45 pm. Onwards</strong></p>
+                <p class="venue-title">Venue Details</p>
+                <p style="font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 10px;">M.J. Garden Function Hall</p>
+                <p style="font-weight: 500;">Falls Road, Beside Jadhav Petrol Pump, Gokak.</p>
+                <a href="https://www.google.com/maps/search/MJ+Garden+Gokak" target="_blank" class="btn-gold">Navigate to Venue</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="compliments">
+        <h3 class="section-title" data-aos="fade-up">WITH BEST COMPLIMENTS FROM</h3>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;" data-aos="fade-up">
+            <p style="font-size: 1.3rem; font-weight: 700; line-height: 2;">Mulla, Bagawale, Nalband, Makandar, Terdal, Jamadar Family, Relatives & Friends</p>
+            <span class="jamdar-tag">MUSLIM JAMAT SHINDIKURBET</span>
+            
+            <hr style="width:60%; margin:50px auto; border: 1px solid var(--gold-solid); opacity: 0.5;">
+            
+            <p style="font-family: 'Amiri', serif; font-size: 1.8rem; font-style: italic; background: var(--liquid-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700;">
+                "And among His signs is that He created for you mates from among yourselves that you may dwell in tranquility with them..." (30:21)
+            </p>
+        </div>
+    </div>
+
+    <footer style="text-align:center; padding:60px 20px; background:#000; color:#888; font-size:0.9rem; letter-spacing: 2px; font-weight: 700; border-top: 1px solid #222;">
+        © 2026 IMTIYAZ & GULNAR WEDDING | BI-IZNILLAH
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize Animations
+        AOS.init({ 
+            duration: 1500, 
+            once: true,
+            mirror: false 
+        });
+
+        // Dynamic Countdown Timer
+        const targetDate = new Date("May 17, 2026 11:45:00").getTime();
+        
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+            
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById("days").innerText = d < 10 ? "0"+d : d;
+            document.getElementById("hours").innerText = h < 10 ? "0"+h : h;
+            document.getElementById("mins").innerText = m < 10 ? "0"+m : m;
+            document.getElementById("secs").innerText = s < 10 ? "0"+s : s;
+        }, 1000);
+    </script>
+</body>
+</html>
