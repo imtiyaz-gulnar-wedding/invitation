@@ -292,6 +292,46 @@
             .timer { gap: 20px; }
             .section-title { font-size: 2.2rem; }
         }
+        /* Add these new classes to your existing style section */
+.divine-header {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 0.9rem;
+    letter-spacing: 5px;
+    color: #C5A059; /* Gold Solid */
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(197, 160, 89, 0.3);
+}
+
+.poetic-line {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #eee;
+    margin-top: 15px;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+.save-the-date-callout {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.3rem;
+    letter-spacing: 10px;
+    color: #fff;
+    margin: 45px 0 10px 0;
+    font-weight: 400;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 45%, #B38728 70%, #AA771C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s infinite alternate;
+}
+
+@keyframes shimmer {
+    from { opacity: 0.6; }
+    to { opacity: 1; filter: drop-shadow(0 0 8px rgba(197,160,89,0.5)); }
+}
     </style>
 </head>
 <body>
@@ -302,7 +342,9 @@
 
     <header>
         <div class="bismillah" data-aos="zoom-in">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
-        
+        <div class="divine-header" data-aos="fade-down">
+        IN THE NAME OF ALLAH, THE MOST BENEFICENT, THE MOST MERCIFUL
+    </div>
         <div data-aos="fade-up">
             <p class="parents-name">Mr. Mahmadyusuf Shoukat Mulla & Mrs. Shakeelabanu M. Mulla</p>
             <span class="teacher-tag">(Bagawale Teacher)</span>
@@ -313,6 +355,9 @@
         <div class="grand-lineage" data-aos="fade-up">
             <p>(Grand S/o. Late Masabi Maliksab Bagawale)</p>
         </div>
+        <div class="save-the-date-callout" data-aos="fade-up" data-aos-delay="600">
+        Save The Date
+    </div>
         <div class="couple-wrap" data-aos="flip-left" data-aos-duration="2000">
             <h1 class="main-names">Imtiyaz</h1>
             <p style="font-family: 'Cinzel Decorative'; color: var(--gold-solid); font-weight: 900; letter-spacing: 5px;">WITH</p>
